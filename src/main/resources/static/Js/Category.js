@@ -30,7 +30,7 @@ function closeModal(){
 $("#modalNewCategory").hide();
 }
 
-function updateDataGrid(Categorys){
+function updateDataGrid(items){
 $("#tblCategorys").find("tr:gt(0)").remove();
 let data="";
 for (let i=0; i<items.length;i++){
@@ -113,12 +113,10 @@ data: body,
 contentType: "application/json;charset=UTF-8"
 })
 .done( function(response){
-console.log( response );
 alert("Categoria Actualizada");
 getAllCategorys();
 })
 .fail(function (jqXHR, textStatus, errorThrown){
-console.log("Error in updateCategpry. "+textStatus);
 alert("Falla Actualizando la categoria");
 });
 closeModal();
