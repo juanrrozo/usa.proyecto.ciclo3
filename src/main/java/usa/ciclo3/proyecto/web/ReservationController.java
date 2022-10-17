@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import usa.ciclo3.proyecto.model.Reservation;
+import usa.ciclo3.proyecto.reports.ContClient;
+import usa.ciclo3.proyecto.reports.StatusReservation;
 import usa.ciclo3.proyecto.service.ReservationService;
 
 import java.util.List;
@@ -41,5 +43,20 @@ public class ReservationController {
     public boolean delete(@PathVariable("id")int reservationId){
         return reservationService.deleteReservation(reservationId);
     }
+    @GetMapping("/report-status")
+    public StatusReservation getReservation() {
+        return reservationService.getReportStatusReservation();
+    }
 
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List<Reservation> getReservationTime(@PathVariable("dateOne") String dateOne, @PathVariable("dateTwo") String dateTwo) {
+        return reservationService.getReportTimeReservation(dateOne, dateTwo);
+    }
+
+    @GetMapping("/report-clients")
+    public List<ContClient> getClientes() {
+        return reservationService.serviceTopClient();
+
+    }
 }
+

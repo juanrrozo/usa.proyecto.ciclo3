@@ -1,0 +1,168 @@
+body{
+background-color: #E6E6FF
+}
+
+.login{
+background-color: #2B2828;
+color: #FFFFFF;
+text-align: right;
+}
+
+.header {
+background-color: #2B85E0;
+color: #FFFFFF;
+text-align: center;
+font-size:35px;
+height:80 px;
+}
+
+.menu{
+text-align: center;
+padding: 15 px;
+}
+
+.content{
+text-align: center;
+font-family: "Arial Black", Gadget, sans-serif;
+letter-spacing: 0px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.title{
+
+}
+.newElement{
+text-align: center;
+}
+
+table.tblData {
+  width: 100%;
+  background-color: #122AA3;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #000000;
+  border-style: solid;
+  color: #FFFFFF;
+}
+
+table.tblData td, table.tblData th {
+  border-width: 2px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 4px;
+}
+
+table.tblData thead {
+  background-color: #1E84F8;
+}
+
+.Button{
+  font-family: 'arial black';
+  color: #FFFFFF !important;
+  font-size: 15px;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 4px 2px 1px #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #1CB1D6;
+  background: linear-gradient(to top, #1CB1D6, #2323CF);
+}
+.btnNew{
+  font-family: 'arial black';
+  color: #FFFFFF !important;
+  font-size: 15px;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 4px 2px 1px #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #1CB1D6;
+  background: linear-gradient(to top, #1CB1D6, #2323CF);
+}
+
+.buttonAdd{
+  font-family: 'arial black';
+  color: #FFFFFF !important;
+  font-size: 15px;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 4px 2px 1px #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #145216;
+  background: linear-gradient(to top, #145216, #2ED933);
+
+}
+
+.buttonUpdate{
+  font-family: 'arial black';
+  color: #FFFFFF !important;
+  font-size: 15px;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 4px 2px 1px #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #1CB1D6;
+  background: linear-gradient(to top, #1CB1D6, #2323CF);
+
+}
+
+
+.buttonCancel{
+  font-family: 'arial black';
+  color: #FFFFFF !important;
+  font-size: 15px;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 4px 2px 1px #000000;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: #D60D0D;
+  background: linear-gradient(to top, #D60D0D, #CF3E21);
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:1;
+  left:200px;
+  top:0;
+  width:auto;
+  height:auto;
+  overflow:auto;
+}
+
+.modalContent{
+   background-color: #a699a8;
+   margin: 30%auto;
+   padding 20 px;
+   border: 1px solid #AAAAAA;
+   width:auto
+}
+
+.imgComputer{
+display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgWelcome{
+display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+

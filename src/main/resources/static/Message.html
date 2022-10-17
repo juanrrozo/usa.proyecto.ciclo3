@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proyecto Ciclo3">
+    <meta name="author" content="Juan Manuel Ramirez Rozo">
+
+    <title>Mensajes</title>
+    <base href="/" />
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Css/ComputerStyle.css" />
+
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Message.js"></script>
+</head>
+<body>
+<div class="container login">
+    <div class="row">
+        <div class="col">
+            Iniciar Sesion
+        </div>
+    </div>
+</div>
+<div class="container header">
+    <div class="row" >
+        <div class="col">
+            Mensajes
+        </div>
+    </div>
+</div>
+<div class="container menu">
+    <div class="row">
+        <div class="col">
+            <nav>
+                <a href="index.html" ><button class="Button">Inicio</button></a>
+                <a href="Category.html"><button class="Button">Category</button></a>
+                <a href="Client.html"><button class="Button">Client</button></a>
+                <a href="Computer.html"><button class="Button">Computer</button></a>
+                <a href="Message.html"><button class="Button">Message</button></a>
+                <a href="Reservation.html"><button class="Button">Reservation</button></a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container content">
+    <div class="row tittle">
+        <div class="col">
+            <h3>Mensajes</h3>
+        </div>
+    </div>
+    <div class="row newElement">
+        <div class="col">
+        <button id="btnNewMessage" class="btnNew" onclick="openModal(-1)";> Agregar Mensaje </button>
+        </div>
+    </div>
+    <div class="row dataGrid">
+        <div class="col">
+        <table id="tblMessages" class="tblData">
+            <thead>
+                <th>Texto Mensaje</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            <tbody>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+<div id="modalNewMessage" class="modal">
+    <div class="modalContent">
+    <h2>Nuevo Mensaje</h2>+
+    <input type="hidden" id="txtIdMessage" value=""/>
+    <label>Texto Mensaje:</label><input type="text" id="txtMessageText" value=""/><br/>
+    <button class="buttonAdd" onclick="saveMessage();">Agregar</button>
+    <button class="buttonUpdate" onclick="updateMessage();">Actualizar</button>
+    <button class="buttonCancel" onclick="closeModal();">Cancelar</button>
+    </div>
+</div>
+</body>
+</html>

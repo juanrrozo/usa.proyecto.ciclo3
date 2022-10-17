@@ -1,13 +1,19 @@
 package usa.ciclo3.proyecto.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import usa.ciclo3.proyecto.model.Reservation;
-import usa.ciclo3.proyecto.repository.ReservationRepository;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.stereotype.Service;
+        import usa.ciclo3.proyecto.model.Reservation;
+        import usa.ciclo3.proyecto.reports.ContClient;
+        import usa.ciclo3.proyecto.reports.StatusReservation;
+        import usa.ciclo3.proyecto.repository.ReservationRepository;
 
-import java.util.List;
-import java.util.Optional;
+        import java.text.ParseException;
+        import java.text.SimpleDateFormat;
+        import java.util.ArrayList;
+        import java.util.Date;
+        import java.util.List;
+        import java.util.Optional;
 
 @Service
 public class ReservationService {
@@ -63,4 +69,32 @@ public class ReservationService {
         }).orElse(false);
         return succes;
     }
+    public StatusReservation getReportStatusReservation() {
+        List<Reservation> completed = reservationRepository.ReservationStatus("completed");
+        List<Reservation> cancelled = reservationRepository.ReservationStatus("cancelled");
+        return new StatusReservation(completed.size(), cancelled.size());
+    }
+
+    public List<Reservation> getReportTimeReservation(String datoA, String datoB) {
+        SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
+        Date datoInicial = new Date();
+        Date datoFinal = new Date();
+
+        try {
+            datoInicial = parser.parse(datoA);
+            datoFinal = parser.parse(datoB);
+        } catch (ParseException evt) {
+            evt.printStackTrace();
+        }
+        if (datoInicial.before(datoFinal)) {
+            return reservationRepository.ReservationTime(datoInicial, datoFinal);
+        } else {
+            return new ArrayList<>();
+        }
+    }
+
+    public List<ContClient> serviceTopClient() {
+        return reservationRepository.getTopClientes();
+    }
+
 }

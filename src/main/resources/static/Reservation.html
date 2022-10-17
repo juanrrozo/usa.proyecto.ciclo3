@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proyecto Ciclo3">
+    <meta name="author" content="Juan Manuel Ramirez Rozo">
+
+    <title>Reservaciones</title>
+    <base href="/" />
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Css/ComputerStyle.css" />
+
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Reservation.js"></script>
+
+</head>
+<body>
+<div class="container login">
+    <div class="row">
+        <div class="col">
+            Iniciar Sesion
+        </div>
+    </div>
+</div>
+<div class="container header">
+    <div class="row" >
+        <div class="col">
+            Reservaciones
+        </div>
+    </div>
+</div>
+<div class="container menu">
+    <div class="row">
+        <div class="col">
+            <nav>
+                <a href="index.html" ><button class="Button">Inicio</button></a>
+                <a href="Category.html"><button class="Button">Category</button></a>
+                <a href="Client.html"><button class="Button">Client</button></a>
+                <a href="Computer.html"><button class="Button">Computer</button></a>
+                <a href="Message.html"><button class="Button">Message</button></a>
+                <a href="Reservation.html"><button class="Button">Reservation</button></a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container content">
+    <div class="row tittle">
+        <div class="col">
+            <h3>Reservaciones</h3>
+        </div>
+    </div>
+</div>
+    <div class="row newElement">
+        <div class="col">
+        <button id="btnNewMessage" class="btnNew" onclick="openModal(-1)";> Agregar Reservación</button>
+    </div>
+        <div class="row dataGrid">
+            <div class="col">
+        <table id="tblReservations" class="tblData">
+            <thead>
+                <th>Fecha Ingreso</th>
+                <th>Fecha Devolucion</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+<div id="modalNewReservation" class="modal">
+    <div class="modalContent">
+    <h2>Nueva Reservación</h2>
+    <input type="hidden" id="txtIdReservation" value=""/>
+    <label>Fecha Ingreso:</label><input type="date" id="dateStartDate" value=""/><br/>
+    <label>Fecha Devolución:</label><input type="date" id="dateDevolutionDate" value=""/><br/>
+        <button class="buttonAdd" onclick="saveReservation();">Agregar</button>
+        <button class="buttonUpdate" onclick="updateReservation();">Actualizar</button>
+        <button class="buttonCancel" onclick="closeModal();">Cancelar</button>
+    </div>
+</div>
+</body>
+</html>
